@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" >
                 <Columns>
                     <asp:TemplateField HeaderText="Name">
                         <EditItemTemplate>
@@ -28,6 +28,15 @@
                             &nbsp;<asp:CheckBox ID="CheckBox2" runat="server" Checked='<%# Eval("Asp_Net") %>' Text="Asp_Net" />
                             &nbsp;<asp:CheckBox ID="CheckBox3" runat="server" Checked='<%# Eval("Python") %>' Text="Python" />
                         </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Edit">
+                        <ItemTemplate>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/WebForm5.aspx?sid=" + Eval("id") %>' >Edit</asp:HyperLink>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                        </EditItemTemplate>
+                        
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>

@@ -11,6 +11,14 @@
         <div>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
                 <Columns>
+                    <asp:TemplateField HeaderText="id">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("id") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:TemplateField HeaderText="Name">
                         <EditItemTemplate>
                             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
@@ -24,7 +32,15 @@
                             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Image ID="Image1" runat="server" Height="160px" ImageUrl='<%# "~/NewFolder1/"+Eval("Image") %>' Width="111px" />
+                            <asp:Image ID="Image1" runat="server" Height="160px" ImageUrl='<%# Eval("Image") %>' Width="111px" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Edit">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/WebForm9.aspx?sid="+Eval("id") %>'>Edit</asp:HyperLink>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

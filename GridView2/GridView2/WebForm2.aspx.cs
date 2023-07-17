@@ -26,13 +26,15 @@ namespace GridView2
         {
             db.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Table4", db);
+
             SqlDataAdapter obj = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             obj.Fill(dt);
-            Console.Write(dt);
             GridView1.DataSource = dt;
             GridView1.DataBind();
             db.Close();
         }
+
+
     }
 }
