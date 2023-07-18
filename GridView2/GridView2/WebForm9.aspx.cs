@@ -26,7 +26,6 @@ namespace GridView2
 
         public void populateField()
         {
-
             db.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Table4 WHERE id='" + gid + "'", db);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -35,34 +34,38 @@ namespace GridView2
             {
                 TextBox1.Text = reader["Name"].ToString();
                 System.Diagnostics.Debug.WriteLine(reader["Image"].ToString());
-                Image1.ImageUrl = Server.MapPath("~/NewFolder1/"+ reader["Image"].ToString());
-
-                if(FileUpload1.FileName == "")
-                {
-                    Image1.ImageUrl = "~/NewFolder1/" + reader["Image"].ToString();
-                }
-                else
-                {
-                    FileUpload1.SaveAs(Server.MapPath("~/NewFolder1/") + FileUpload1.FileName);
-                    Image1.ImageUrl = ("~/NewFolder1/" + FileUpload1.FileName);
-                }
+                Image1.ImageUrl = "~/NewFolder1/"+ reader["Image"].ToString();
             }
-         
             db.Close();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            db.Open();
-
-            SqlCommand cmd = new SqlCommand("UPDATE Table4 SET Name='" + TextBox1.Text + "', Image='"+ Image1.ImageUrl +"' WHERE id='"+gid+"'", db);
-            int b = cmd.ExecuteNonQuery();
-            if (b > 0)
+            if (FileUpload1.HasFile)
             {
-                Response.Write("VALUE UPDATED");
-                Response.Redirect("~/WebForm2.aspx");
-            }
+                FileUpload1.SaveAs(Server.MapPath("~/NewFolder1/") + FileUpload1.FileName);
+            db.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE Table4 SET Name='" + TextBox1.Text + "', Image='" + FileUpload1.FileName + "' WHERE id='" + gid + "'", db);
+                int b = cmd.ExecuteNonQuery();
+                if (b > 0)
+                {
+                    Response.Write("VALUE UPDATED");
+                    Response.Redirect("~/WebForm2.aspx");
+                }
             db.Close();
+            }
+            else
+            {
+                db.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE Table4 SET Name='" + TextBox1.Text + "' WHERE id='" + gid + "'", db);
+                int b = cmd.ExecuteNonQuery();
+                if (b > 0)
+                {
+                    Response.Write("VALUE UPDATED");
+                    Response.Redirect("~/WebForm2.aspx");
+                }
+                db.Close();
+            }
         }
     }
 }

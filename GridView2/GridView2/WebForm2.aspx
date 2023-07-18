@@ -32,7 +32,7 @@
                             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                         </EditItemTemplate>
                         <ItemTemplate>
-                            <asp:Image ID="Image1" runat="server" Height="160px" ImageUrl='<%# Eval("Image") %>' Width="111px" />
+                            <asp:Image ID="Image1" runat="server" Height="160px" ImageUrl='<%# "~/NewFolder1/"+Eval("Image") %>' Width="111px" />
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Edit">
