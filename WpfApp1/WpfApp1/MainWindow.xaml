@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="BtnPlay">
+        <MediaElement x:Name="Mdemt" Margin="80,35,73,164" UnloadedBehavior="Manual" LoadedBehavior="Manual"/>
+        <Button x:Name="BtnPlay1" Content="PLAY" Margin="75,332,662,71" Click="BtnPlay1_Click"/>
+        <Button x:Name="BtnStop" Content="STOP" Margin="164,332,579,72" Click="BtnStop_Click"/>
+        <Button x:Name="BtnForward" Content="FORWARD" Margin="247,332,491,71" Click="BtnForward_Click"/>
+        <Button x:Name="BtnBack" Content="BACKWARD" Margin="335,330,396,69" Click="BtnBack_Click"/>
+        <Button x:Name="BtnOpen" Content="OPEN" Margin="430,327,300,69" Click="BtnOpen_Click"/>
+
+    </Grid>
+</Window>

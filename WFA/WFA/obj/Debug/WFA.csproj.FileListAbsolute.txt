@@ -1,0 +1,11 @@
+D:\ProjectsASP.NET\InetInfotechASP_NET\WFA\WFA\bin\Debug\WFA.exe.config
+D:\ProjectsASP.NET\InetInfotechASP_NET\WFA\WFA\bin\Debug\WFA.exe
+D:\ProjectsASP.NET\InetInfotechASP_NET\WFA\WFA\bin\Debug\WFA.pdb
+D:\ProjectsASP.NET\InetInfotechASP_NET\WFA\WFA\obj\Debug\WFA.csproj.AssemblyReference.cache
+D:\ProjectsASP.NET\InetInfotechASP_NET\WFA\WFA\obj\Debug\WFA.csproj.SuggestedBindingRedirects.cache
+D:\ProjectsASP.NET\InetInfotechASP_NET\WFA\WFA\obj\Debug\WFA.Form1.resources
+D:\ProjectsASP.NET\InetInfotechASP_NET\WFA\WFA\obj\Debug\WFA.Properties.Resources.resources
+D:\ProjectsASP.NET\InetInfotechASP_NET\WFA\WFA\obj\Debug\WFA.csproj.GenerateResource.cache
+D:\ProjectsASP.NET\InetInfotechASP_NET\WFA\WFA\obj\Debug\WFA.csproj.CoreCompileInputs.cache
+D:\ProjectsASP.NET\InetInfotechASP_NET\WFA\WFA\obj\Debug\WFA.exe
+D:\ProjectsASP.NET\InetInfotechASP_NET\WFA\WFA\obj\Debug\WFA.pdb
