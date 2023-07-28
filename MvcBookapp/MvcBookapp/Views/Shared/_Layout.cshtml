@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    @Html.Partial("Header")
+    @RenderSection("metatags",false)
+</head>
+<body>
+
+    <!-- Top Menu Start -->
+    @Html.Partial("TopMenu")
+    <!-- End of Top Menu-->
+
+    <!-- Banner Start -->
+    @Html.Partial("Banner")
+    <!-- End of Banner -->
+
+
+    <div id="templatemo_content_wrapper">
+        <div id="templatemo_content">
+
+            <!-- Content Area -->
+            <div id="column_w530">
+                <div class="header_02">Welcome to our WEBSITE!</div>
+
+                <p class="em_text">
+                    This is Home Page of this Websites and you are learning to design Master Pages in MVC using External CSS HTML Templates at <a href="http://www.completecsharptutorial.com">Complete C# Tutorial</a>.
+                </p>
+                @RenderBody()
+                <div class="cleaner"></div>
+            </div>
+            <!-- End of Content Area -->
+            <!-- Right Sidebar -->
+             @Html.Partial("Sidebar")
+            <!-- End of Right Sidebar -->
+
+            <div class="cleaner"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+     @Html.Partial("Footer")
+    <!-- End of Footer -->
+    </body>
+</html>
